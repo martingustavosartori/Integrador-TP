@@ -1,0 +1,42 @@
+.fondo{
+    background-image: url("../imagenes/ba1.jpg");
+}
+.section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imagenes/ba1.jpg");
+}
+.letraImagenBa{
+    font-size: 0.5rem;
+}
+.conoceaLos{
+    text-align: center;
+    font-size : 7pt;
+    font-family : verdana,arial;
+}
+.oradores {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20pt;
+}
+.orador {
+    display: flex;
+    align-items: row;   
+    margin-right: 2rem; 
+}
+.textoPunteado{
+    text-decoration:underline;
+    text-decoration-style: dotted;
+}
+.botonColor{
+    background-color: rgb(150, 201, 62);
+    font-size: 15pt;
+    font-family : verdana,arial;
+}
+.colorNavbar {
+    background-color: rgb(30, 59, 73);
+    font-family : verdana,arial;
+}
+
+  
+
