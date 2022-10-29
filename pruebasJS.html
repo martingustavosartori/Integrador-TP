@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Integrador JavaScript</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="css/integradorJS.css">-->
+    <link rel="stylesheet" href="css/integradorJS.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark p-2 ">
+      <div>
+        <a class="navbar-brand p-5" href="https://aulasvirtuales.bue.edu.ar/login/index.php">
+            Conf Bs As
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      </div>
+      <div class="collapse navbar-collapse flex-grow-1 text-start" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mx-5">
+          <li class="nav-item">
+            <a class="nav-link" href="#">La Conferencia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Los Oradores</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">El lugar y la fecha</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Conviertete en orador</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link comprarTickets " href="#">Comprar tickets</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <div class="d-flex justify-content-center cardCurso">
+          <div class="card" style="width: 20rem; border-color: blue">
+            <div class="card-body text-center">
+              <h4 class="card-title">Estudiante</h4>
+              <p class="card-text">Tienen un descuento</p>
+              <p>80%</p>
+              <p class="card-text"><small class="text-muted">* presentar documentación</small></p>
+            </div>
+          </div>
+          <div class="card text-center" style="width: 20rem; border-color: green;">
+            <div class="card-body">
+              <h5 class="card-title">Trainee</h5>
+              <p class="card-text">Tienen un descuento</p>
+              <p>50%</p>
+              <p class="card-text"><small class="text-muted">* presentar documentación</small></p>
+            </div>
+          </div>
+          <div class="card" style="width: 20rem; border-color: orange">
+            <div class="card-body text-center">
+              <h5 class="card-title">Junior</h5>
+              <p class="card-text">Tienen un descuento</p>
+              <p>15%</p>
+              <p class="card-text"><small class="text-muted">* presentar documentación</small></p>
+            </div>
+          </div>
+    </div>
+    <div class="py-4 text-center">
+      <h6>VENTA</h6>
+      <h1>VALOR DE TICKET $200</h1>
+    </div>
+    <!--<div class="container" >-->
+  <!--<div class="container-fluid justify-content-center">-->
+    <form action="#" method="post">
+      <div class="row">
+        <div class="col-md-2 mb-4"></div>
+        <div class="col-md-4 mb-4">
+          <input type="text" name="" id="nombre" class="form-control" placeholder="Nombre" required>
+        </div>
+        <div class="col-md-4 mb-4">
+          <input type="text" name="" id="apellido" class="form-control" placeholder="Apellido" required>
+        </div>
+        <div class="col-md-2 mb-4"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-2 mb-3"></div>
+        <div class="col-md-8 mb-3">
+          <input type="email" name="" id="email" class="form-control" placeholder="Correo" required>
+        </div>
+        <div class="col-md-2 mb-3"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4 mb-3 ">
+          <label for="" class="form-label">Cantidad</label>
+          <input type="number" name="" id="cantidad" class="form-control" placeholder="Cantidad" onload="habilitar()"  required>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="" class="form-label">Categoría</label>
+         <select class="form-select" id="categoria" name="seleccion" onchange="totalPagar()">
+          <option>Seleccione una opcion</option>
+          <option>Estudiantes</option>
+          <option>Trainee</option>
+          <option>Junior</option>
+        </select>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+      <!--<div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <label type="number" class="form-control " placeholder="Total a Pagar $ " onkeyup="totalPagar()"></label>
+        </div>
+        <div class="col-md-4"></div>
+      </div>-->
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div id="total" class="bg-info p-2">
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+      </div>
+      <!--
+      <div class="row bg-white">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 mb-3">
+          <input class="form-control" rows="6" placeholder="Correo" border-dark></textarea>
+          <p style="color: rgb(165, 161, 161);">Recuerda ingresar un título para tu charla</p>              
+        </div>
+        <div class="col-md-3"></div>
+        <div class="d-grid col-6 mx-auto p-0">
+          <button class="btn btn-outline-primary botonColor text-light" type="button">Enviar</button>
+        </div>
+      </div>    -->      
+    </form>
+  </div>  
+</main>
+  <footer>
+    <!--
+    <nav class="navbar navbar-expand-md colorNavbar navbar-dark p-2">
+      <a class="navbar-brand" href="#"></a>Con esto queda a la derecha
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mx-auto mb-2">
+          <li class="nav-item ">
+            <a class="nav-link active" href="#">Preguntas<br>Frecuentes</a>
+          </li>
+          <li class="nav-item py-2">
+            <a class="nav-link active" href="#">Contáctanos</a>
+          </li>
+          <li class="nav-item py-2">
+            <a class="nav-link active" href="#">Prensa</a>
+          </li>
+          <li class="nav-item py-2">
+            <a class="nav-link active" href="#">Conferencias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Terminos y<br>Condiciones</a>
+          </li>
+          <li class="nav-item py-2">
+            <a class="nav-link active" href="#">Conferencias</a>
+          </li>
+          <li class="nav-item py-2">
+            <a class="nav-link active" href="#">Privacidad</a>
+          </li>
+          <li class="nav-item py-2">
+            <a class="nav-link active" href="#">Estudiantes</a>
+          </li>
+        </ul>
+      </div>
+    </nav> -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="js/integradorJS.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
